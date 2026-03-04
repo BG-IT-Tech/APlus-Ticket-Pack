@@ -1,0 +1,4 @@
+Ethernet adapter:
+IPv4 Address: 169.254.44.18
+Subnet Mask: 255.255.0.0
+Default Gateway: 

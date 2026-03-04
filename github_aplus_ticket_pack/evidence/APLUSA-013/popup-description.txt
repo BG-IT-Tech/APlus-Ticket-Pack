@@ -1,0 +1,1 @@
+Pop-up says 'Warning! 5 viruses found. Click Clean Now.' Opens in browser.

@@ -1,0 +1,3 @@
+Queue shows 4 pending jobs.
+Oldest job size: 187 MB
+Status: Printing

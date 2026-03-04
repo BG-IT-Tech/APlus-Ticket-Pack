@@ -1,0 +1,2 @@
+Homepage set to search-find-now.example
+Default search engine changed

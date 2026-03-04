@@ -1,0 +1,2 @@
+Headset status: Paired
+Connection state: Not connected for audio

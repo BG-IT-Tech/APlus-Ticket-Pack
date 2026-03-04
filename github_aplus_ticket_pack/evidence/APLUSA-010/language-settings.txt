@@ -1,0 +1,2 @@
+Installed input languages: English UK, English US
+Active layout: English US

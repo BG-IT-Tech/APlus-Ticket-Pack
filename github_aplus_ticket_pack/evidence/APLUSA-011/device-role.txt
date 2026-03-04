@@ -1,0 +1,1 @@
+Device build type: Standard user build

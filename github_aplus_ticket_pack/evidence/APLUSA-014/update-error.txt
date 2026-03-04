@@ -1,0 +1,2 @@
+Windows Update failed with repeated retries.
+Installation could not complete.

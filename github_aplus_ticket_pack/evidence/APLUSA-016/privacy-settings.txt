@@ -1,0 +1,2 @@
+Camera access for desktop apps: Off
+Microphone access for desktop apps: Off

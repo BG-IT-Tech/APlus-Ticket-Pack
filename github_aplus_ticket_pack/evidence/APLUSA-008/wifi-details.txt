@@ -1,0 +1,3 @@
+SSID: Office-Staff
+Security: WPA2-Enterprise
+DNS server manually set to 8.8.8.9

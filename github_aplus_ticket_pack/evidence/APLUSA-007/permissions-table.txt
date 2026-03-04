@@ -1,0 +1,2 @@
+Marketing-Shared -> Access group: MKT_RW
+Users in group: alan, jess, tom

@@ -1,0 +1,1 @@
+CPU normal after boot. Disk stays near 100 percent for several minutes.

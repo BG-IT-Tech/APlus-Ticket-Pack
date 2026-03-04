@@ -1,0 +1,1 @@
+User says drive light turns on when connected.

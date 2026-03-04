@@ -1,0 +1,2 @@
+Critical errors began after display driver install.
+Stop code references graphics subsystem.

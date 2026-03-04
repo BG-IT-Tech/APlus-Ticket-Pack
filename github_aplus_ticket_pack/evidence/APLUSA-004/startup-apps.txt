@@ -1,0 +1,2 @@
+Startup items enabled: 14
+Includes chat tools, updater tools, toolbar app, media helper

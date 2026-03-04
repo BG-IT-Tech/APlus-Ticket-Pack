@@ -1,0 +1,2 @@
+Selected microphone: Laptop Array
+Selected camera: None

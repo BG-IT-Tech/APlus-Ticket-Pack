@@ -1,0 +1,1 @@
+USB disk detected as Online, Healthy, no drive letter assigned.

@@ -1,0 +1,3 @@
+Printer online: Yes
+Paper: Loaded
+Toner: OK

@@ -1,0 +1,2 @@
+Incoming server: correct
+Outgoing server auth: disabled
