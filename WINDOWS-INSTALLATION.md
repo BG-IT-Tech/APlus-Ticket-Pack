@@ -1,106 +1,48 @@
 # Windows Installation Guide
 
-This comprehensive guide will help you install Windows on your machine with detailed step-by-step instructions, system requirements, hardware specifications, and troubleshooting solutions.
+## Introduction
+This guide aims to assist users in installing the software on Windows systems. It provides troubleshooting steps, PowerShell commands, and helpful resources.
+
+## Installation Steps
+1. **Download the Installer**: Visit the official website to download the latest version.
+2. **Run the Installer**: Right-click on the installer and select "Run as administrator".
+3. **Follow the Prompts**: Complete the installation following the on-screen instructions.
+
+## Troubleshooting Common Issues
+### Issue 1: Installer Fails to Start
+- **Solution**: Ensure that you have the required permissions. Try running PowerShell as an administrator and execute the following command:
+  ```powershell
+  Start-Process "Path\to\Installer.exe" -Verb RunAs
+  ```
+- **References**:
+  - [How to troubleshoot installation issues](https://example.com/troubleshooting)
+
+### Issue 2: Software Crashes After Installation
+- **Solution**: Check the application logs for errors. Run the following PowerShell command to access logs:
+  ```powershell
+  Get-EventLog -LogName Application | Where-Object { $_.Source -eq 'YourSoftwareName' }
+  ```
+- **References**:
+  - [Application crash solutions](https://example.com/crash)
+
+## PowerShell Commands for Installation
+- To check system requirements:
+  ```powershell
+  Get-WmiObject -Class Win32_ComputerSystem
+  ```
+- To uninstall the software:
+  ```powershell
+  Get-WmiObject -Query "SELECT * FROM Win32_Product WHERE Name = 'YourSoftwareName'" | ForEach-Object { $_.Uninstall() }
+  ```
+
+## Helpful Resources
+- [Official Documentation](https://example.com/documentation)
+- [Community Forum](https://example.com/forum)
+- [PowerShell Basics](https://example.com/powershell-basics)
+
+## Conclusion
+For further assistance, please contact support or refer to the resources provided. 
 
 ---
 
-## Minimum System Requirements
-
-### PC Specifications
-Before installing Windows, ensure your computer meets these minimum requirements:
-
-| Component | Windows 10 | Windows 11 |
-|-----------|-----------|-----------|
-| **Processor** | 1 GHz or faster with SSE2 support | 1 GHz or faster, 2 cores minimum (Intel 8th Gen or AMD Ryzen 2000 series+) |
-| **RAM** | 1 GB (32-bit) / 2 GB (64-bit) | 4 GB minimum |
-| **Disk Space** | 16 GB (32-bit) / 20 GB (64-bit) | 64 GB minimum SSD |
-| **Graphics** | DirectX 9 or later compatible | DirectX 12 compatible GPU |
-| **Display** | 800 x 600 minimum | 720p (1280 x 720) minimum for 64-bit |
-| **Firmware** | BIOS or UEFI | UEFI firmware with Secure Boot capable |
-| **TPM** | Optional | TPM 2.0 required (Windows 11) |
-
-### Recommended Specifications
-For optimal performance:
-- **Processor**: Multi-core processor, 2.0 GHz or faster
-- **RAM**: 4 GB or more (8 GB+ recommended)
-- **Storage**: SSD with at least 128 GB
-- **Internet**: Broadband connection for updates
-
----
-
-## Installation Media Requirements
-
-### USB Drive Specifications
-- **Capacity**: Minimum 8 GB (16 GB recommended for easier creation)
-- **Speed**: USB 3.0 or higher recommended for faster creation
-- **Type**: USB flash drive or external USB hard drive
-- **Format**: FAT32 or NTFS (will be formatted during creation)
-- **Interface**: Standard USB-A connector
-
-**Note**: The drive will be completely wiped during the Media Creation Tool process. Backup any important data before proceeding.
-
-### DVD Specifications
-- **Media Type**: Recordable DVD-R or DVD+R
-- **Capacity**: Dual-layer DVD-DL (8.5 GB) required
-- **Speed**: 8x or higher recommended
-- **Drive Type**: Compatible DVD-R drive with write capability
-- **Software**: DVD authoring software (Windows Disc Image Burner, Nero, etc.)
-
-**Steps to Create Windows Installation DVD:**
-1. Download the Windows ISO file
-2. Insert blank DVD into your DVD drive
-3. Right-click the ISO file → Select "Burn disc image"
-4. Choose your DVD drive
-5. Click "Burn" and wait for completion
-
----
-
-## Step 1: Prepare Installation Media
-
-### Option A: Using USB Drive (Recommended)
-
-**Download Tools:**
-- [Windows Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows10)
-- [Windows 11 Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows11)
-
-**Detailed Instructions:**
-
-1. **Insert USB Drive**
-   - Connect your USB drive to a working computer
-   - Ensure the drive has no critical files (they will be deleted)
-
-2. **Run Media Creation Tool**
-   - Download the Media Creation Tool from Microsoft's official website
-   - Close all other programs before running the tool
-   - Right-click the tool → Select "Run as administrator"
-   ![Media Creation Tool Launch](https://example.com/media_creation_tool_launch.png)
-
-3. **Create Installation Media**
-   - Accept the license terms
-   - Select "Create installation media for another PC"
-   - Choose preferred language, Windows edition, and architecture (64-bit recommended)
-   ![Media Creation Options](https://example.com/media_creation_options.png)
-
-4. **Select USB Flash Drive**
-   - Choose "USB flash drive"
-   - Select your USB drive from the list (verify the correct drive!)
-   ![USB Drive Selection](https://example.com/usb_selection.png)
-
-5. **Complete Creation Process**
-   - Allow the tool to download Windows files
-   - Wait for the USB drive creation to complete (15-30 minutes depending on speed)
-   - Click "Finish" when complete
-   ![Creation Complete](https://example.com/creation_complete.png)
-
-### Option B: Using DVD
-1. Download Windows ISO file
-2. Burn ISO to DVD using DVD authoring software
-3. Verify the burnt disc by checking file integrity
-
-### Verification Steps
-```powershell
-# Check USB drive contents (PowerShell as Administrator)
-Get-ChildItem -Path "E:\" -Recurse | Measure-Object
-
-# Verify file integrity using hash
-Get-FileHash "Path\To\ISO" -Algorithm SHA256
+*Last updated on: 2026-03-29*
